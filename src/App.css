@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main-div {
+  min-height: 100vh;
+  background: #90bee6;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.child-div {
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.child-div figure img {
+  width: 10rem;
+  height: 8rem;
+}
+
+.child-div figure figcaption {
+  color: #071458;
+  font-size: 2.2rem;
+  padding-top: 2rem;
+  text-transform: capitalize;
+}
+
+input {
+ 
+  width: 40rem;
+  height: 3.4rem;
+  padding: 2rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  margin-top: 2rem;
+  color: rgb(58, 57, 57);
+  background-color: #ffffff;
+  background-image: none;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+}
+
+input
+{
+  border: none;
+  padding: 2.3rem 1.5rem;
+  outline: none;
+}
+
+
+.todo-btn {
+  width: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa {
+  margin-left: -2.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: #fff;
+  background-image: none;
+  color: #666;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
+}
+.fa:hover {
+  color: rgb(214, 47, 47);
+}
+
+
+
+.showItems {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.eachItem {
+ 
+  padding: 1.2rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+  width: 40rem;
+  background: rgb(85, 41, 220);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eachItem:hover {
+  background: rgb(132, 132, 223);
+  color: rgb(23, 2, 87);
+}
+
+.showItems .eachItem h3 {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.fa-trash-alt,
+.fa-edit {
+  
+  cursor: pointer;
+  
+  z-index: 5;
+  color: rgb(251, 251, 251);
+  
+  font-size: 2rem;
+}
+
+.addItems .fa-edit {
+  color: rgb(47, 214, 122);
+}
+
+.fa-edit {
+  margin-left: -3.5rem;
+}
+
+.eachItem:hover .fa-trash-alt {
+  color: rgb(214, 47, 61);
+}
+
+.eachItem:hover .fa-edit {
+  color: rgb(214, 47, 61);
+}
+
+.eachItem:hover h3 {
+  color: rgb(85, 41, 220);
+}
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+@media(max-width:450px)
+{
+  input{
+    width: 200px;
+  }
+  .eachItem{
+    width: 200px;
+  }
+}
+@media(max-width:250px)
+{
+  input{
+    width: 100px;
+    font-size: 150%;
+  }
+  .eachItem{
+    width: 100px;
+    
+  }
+  .eachItem h3{
+    font-size: 10%;
+  }
+  .todo-btn{
+    width: 0.1%;
+  }
+  
+  
+}
+
