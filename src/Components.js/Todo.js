@@ -1,10 +1,21 @@
-import React ,{useState} from 'react'
+import React ,{useState,useEffect} from 'react'
 import '../App.css';
 import logo from '../images/logo.jpg';
 
+const getLocalItems=()=>{
+  let list=localStorage.getItem('lists');
+  if(list)
+  {
+    //to convert to object
+    return JSON.parse(localStorage.getItem('lists'));
+  }
+  else
+  return [];
+}
+
 const Todo = () => {
   const [inputData,setData]=useState("");
-  const [items,setItems]=useState([]);
+  const [items,setItems]=useState(getLocalItems());
   const [toggle,setToggle]=useState(true);
   const [isEditItem,setEditItem]=useState(null);
   const addItem=()=>{
@@ -51,6 +62,11 @@ const Todo = () => {
     setEditItem(id);
 
   }
+  useEffect(()=>{
+    localStorage.setItem('lists',JSON.stringify(items))
+
+
+  },[items]);
   return (
     <>
     <div className='main-div'>
